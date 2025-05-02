@@ -104,7 +104,7 @@ def generate_character():
 	fake = Faker("ru_RU")
 	skills = random.sample(SKILLS, 3)
 
-	context = {
+	return {
 	        "first_name": fake.first_name(),
 	        "last_name": fake.last_name(),
 	        "job": fake.job(),
@@ -117,9 +117,8 @@ def generate_character():
 	        "skill_1": runic_skills(skills[0]),
 	        "skill_2": runic_skills(skills[1]),
 	        "skill_3": runic_skills(skills[2])
-	    }
+	}
 	    
-	return context
 
 
 def generate_cards():
